@@ -1,7 +1,7 @@
 # wix1002-tutorial-lab-5
 
-### Name: <insert-your-name-here>
-### Matric Number: <insert-your-matric-num-here>
+### Name: Lau Tze Suen
+### Matric Number: 23119270
 
 1. Join the assignment. It will create a template repository in your GitHub repo.
 2. Clone the generated repo to your laptop and start working on it.
