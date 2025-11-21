@@ -109,12 +109,41 @@
 
 4.  Write the statements that display the number of occurrence of the word "the" (case sensitive) in a string array name sentence.  
 ```java
-
+int theCount = 0;
+String[] words = userInput.split(" "); 
+for (String word : words) {
+if (word.equals("the")) {
+theCount++;}
+System.out.println("The number of occurrences of the word 'the' (case sensitive) is: " + theCount);
 ```
 ---
 
 5.  Write the statements that display the string array name sentence in reverse order. Each string element must be displayed in reverse order as well.  
-
+```java
+String[] sentence = userInput.split(" "); 
+for (int i = sentence.length - 1; i >= 0; i--) {
+char[] charArray = sentence[i].toCharArray();
+for (int left = 0, right = charArray.length - 1; left < right; left++, right--) {
+char temp = charArray[left];
+charArray[left] = charArray[right];
+charArray[right] = temp;}
+System.out.print(new String(charArray)+" ");
+```
 ---
 
 6.  Write the statements that generate 1 random integer within 0-255. Convert the number to binary and store the bit into an 8-bit array. Then, display the binary number.  
+```java
+Random num = new Random();
+int randomNumber = num.nextInt(256); 
+int[] binaryArray = new int[8];
+
+int temp = randomNumber;
+for (int i = 7; i >= 0; i--) {
+    binaryArray[i] = temp % 2;
+    temp = temp / 2;}
+
+System.out.println("Decimal value: " + randomNumber);
+System.out.print("Binary value: ");
+for (int i = 0; i < binaryArray.length; i++) {
+    System.out.print(binaryArray[i]);
+```
