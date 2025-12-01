@@ -110,8 +110,8 @@
 4.  Write the statements that display the number of occurrence of the word "the" (case sensitive) in a string array name sentence.  
 ```java
 int theCount = 0;
-String[] words = userInput.split(" "); 
-for (String word : words) {
+String[] sentence = userInput.split(" "); 
+for (String word : sentence) {
 if (word.equals("the")) {
 theCount++;}
 System.out.println("The number of occurrences of the word 'the' (case sensitive) is: " + theCount);
